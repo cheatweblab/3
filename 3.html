@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <script>
+        var val;
+        function show(val)
+        {
+            document.getElementById('result').value=document.getElementById('result').value+val;
+        }
+
+        function solve()  
+        {
+            let x=document.getElementById("result").value
+            let y= eval(x)
+            document.getElementById("result").value=y
+        }
+
+
+    </script>
+
+    <style>
+        button
+        {
+            color: blue;
+        }
+        table
+        {
+            border: 5px solid black;
+            align-content: center;
+        }
+        th,td
+        {
+            background-color: yellow;
+        }
+        button
+        {
+            align-content: center;
+        }
+    </style>
+
+</head>
+<body>
+    <table>
+        <td colspan="4"><input type="text" id="result"></td>
+        <tr>
+            <td><button id ="one" onclick="show(1)">1</button></td>
+            <td><button id ="two" onclick="show(2)">2</button></td>
+            <td><button id ="three" onclick="show(3)">3</button></td>
+            <td><button id ="add" onclick="show('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button id ="four" onclick="show(4)">4</button></td>
+            <td><button id ="five" onclick="show(5)">5</button></td>
+            <td><button id ="six" onclick="show(6)">6</button></td>
+            <td><button id ="minus" onclick="show('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button id ="seven" onclick="show(7)">7</button></td>
+            <td><button id ="eight" onclick="show(8)">8</button></td>
+            <td><button id ="nine" onclick="show(9)">9</button></td>
+            <td><button id ="multiply" onclick="show('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button id ="zero" onclick="show(0)">0</button></td>
+            <td><button id ="decimal" onclick="show('.')">.</button></td>
+            <td><button id ="div" onclick="show('/')">/</button></td>
+            <td><button id="result" onclick="solve()">=</button></td>
+        </tr>
+    </table>
+</body>
+</html>
